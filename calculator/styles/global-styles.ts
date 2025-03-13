@@ -11,7 +11,7 @@ export const globalStyles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         paddingBottom: 20,
-        paddingHorizontal: 20,
+        paddingHorizontal: 10,
     },
     mainResult: {
         color: Colors.textPrimary,
@@ -27,7 +27,7 @@ export const globalStyles = StyleSheet.create({
     row: {
         flexDirection: 'row',
         justifyContent: 'center',
-        marginHorizontal: 10,
+        alignItems: 'center',
         marginBottom: 15,
     },
     calculatorButton: {

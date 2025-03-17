@@ -5,7 +5,14 @@ import PlanetsScreen from '../screens/PlanetsScreen';
 import SearchScreen from '../screens/SearchScreen';
 import CharacterInfo from '../screens/CharacterInfo';
 
-const Stack = createStackNavigator();
+export type RootStackParams = {
+  CharactersScreen: undefined;
+  SearchScreen: undefined;
+  PlanetsScreen: undefined;
+  PersonajeScreen: {id: number; name: string};
+};
+
+const Stack = createStackNavigator<RootStackParams>();
 const StackNavigator = () => {
   return (
     <Stack.Navigator

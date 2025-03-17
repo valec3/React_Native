@@ -2,8 +2,14 @@ import {View, Text} from 'react-native';
 import React, {useEffect} from 'react';
 import {theme} from '../themes';
 import {StackScreenProps} from '@react-navigation/stack';
+import {RootStackParams} from '../navigator/StackNavigator';
 
-interface CharacterInfoProps extends StackScreenProps<any, any> {}
+// interface RouterParams {
+//   id: number;
+//   name: string;
+// }
+interface CharacterInfoProps
+  extends StackScreenProps<RootStackParams, 'PersonajeScreen'> {}
 
 const CharacterInfo = ({navigation, route}: CharacterInfoProps) => {
   const {id, name} = route.params;
@@ -12,11 +18,11 @@ const CharacterInfo = ({navigation, route}: CharacterInfoProps) => {
     navigation.setOptions({
       title: name,
     });
-  }, [navigation]);
+  }, [navigation, id, name]);
 
   return (
     <View style={theme.globalMargin}>
-      <Text>CharacterInfo</Text>
+      <Text>PERSONA INFO</Text>
       <Text>{id}</Text>
       <Text>{name}</Text>
     </View>

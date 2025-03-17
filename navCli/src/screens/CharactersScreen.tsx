@@ -14,11 +14,20 @@ const CharactersScreen = ({navigation}: CharactersScreenProps) => {
         onPress={() => navigation.navigate('Planetas')}
       />
       <Button
-        title="Go to INFO PERSONAJE"
+        title="Go to juan"
         onPress={() =>
           navigation.navigate('Personaje', {
             id: 1,
             name: 'JUAN',
+          })
+        }
+      />
+      <Button
+        title="Go to INFO mari"
+        onPress={() =>
+          navigation.navigate('Personaje', {
+            id: 2,
+            name: 'Maria',
           })
         }
       />
